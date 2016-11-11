@@ -1,4 +1,4 @@
-package com.ushan.SpringDataMongoExample;
+package com.ushan.dao;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
