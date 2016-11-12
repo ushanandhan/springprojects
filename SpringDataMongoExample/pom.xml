@@ -14,14 +14,14 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- Spring -->
-		<spring-framework.version>4.0.0.RELEASE</spring-framework.version>
+		<spring-framework.version>4.3.4.RELEASE</spring-framework.version>
 
 		<!-- Logging -->
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
 
 		<!-- Test -->
-		<junit.version>4.11</junit.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 
 	<dependencies>
@@ -30,6 +30,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
 
@@ -65,14 +71,15 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>${spring-framework.version}</version>
+			<version>4.1.5.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
-			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 </project>
