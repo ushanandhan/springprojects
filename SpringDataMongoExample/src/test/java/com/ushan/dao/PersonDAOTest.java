@@ -27,7 +27,7 @@ public class PersonDAOTest {
 //	}
 	
 	@Test
-//	@Ignore
+	@Ignore
 	public void testCreatePerson() {
 		Person person = new Person(null,"Ushan" , "Trivandrum");
 		personDAO.createPerson(person);

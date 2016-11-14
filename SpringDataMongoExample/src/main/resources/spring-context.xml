@@ -15,8 +15,10 @@
 		<constructor-arg value="testdb" />
 	</bean>
 
-	<bean id="personDAO" class="com.ushan.dao.PersonDAOImpl">
+	<!-- <bean id="personDAO" class="com.ushan.dao.PersonDAOImpl">
 		<constructor-arg name="mongoOps" ref="mongoTemplate" />
-	</bean>
+	</bean> -->
+	
+	<mongo:repositories base-package="com.ushan.dao" />
 
 </beans>
