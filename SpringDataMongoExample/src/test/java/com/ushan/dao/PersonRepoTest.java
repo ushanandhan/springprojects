@@ -26,7 +26,7 @@ public class PersonRepoTest{
 	@Test
 	@Ignore
 	public void getPersonByIdTest(){
-		Person person = personRepo.findOne("5827204cb61691b2d05906c6");
+		Person person = personRepo.findOne("582a0091b6163eb03774615c");
 		System.out.println("Person is : "+person.getName());
 	}
 	
