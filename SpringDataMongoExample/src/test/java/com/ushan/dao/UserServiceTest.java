@@ -22,8 +22,7 @@ import com.ushan.service.UserService;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(value={"classpath:spring-context.xml"})
-public class UserServiceTest
-{
+public class UserServiceTest{
 	@Autowired
     private static UserService userService;
 	
@@ -39,7 +38,7 @@ public class UserServiceTest
     }
 
     @Test
-//    @Ignore
+//  @Ignore
     public void testAddUser()
     {
         // Create a user

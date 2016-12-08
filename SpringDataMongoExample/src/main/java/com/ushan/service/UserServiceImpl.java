@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.ushan.bean.Address;
@@ -18,7 +19,7 @@ import com.ushan.dao.UserRepository;
 /**
  * Implementation of the UserService
  */
-@Service("userService")
+@Component("userService")
 public class UserServiceImpl implements UserService
 {
     @Autowired
