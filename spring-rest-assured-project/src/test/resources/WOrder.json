@@ -1,0 +1,65 @@
+{
+	"workDescription" : "Technical problem with the machine",
+	"workType" : "Manual",
+	"instruction" : {
+		"id" : "INS0001253",
+		"descriptionList" : ["instruction 1", "instruction 2", "instruction 3"]
+	},
+	"cost" : "$125",
+	"location" : {
+		"addressId" : "ADD0001235",
+		"addressType" : "HOME",
+		"address1" : "No 1 9th Street",
+		"address2" : "Brokelyn road",
+		"city" : "Dallas",
+		"state" : "Texas",
+		"country" : "United States of America",
+		"zipCode" : "75001"
+	},
+	"technicianAssinged" : {
+		"technicianId" : "TECID10243",
+		"name" : "Vincent",
+		"address" : {
+			"addressId" : "ADD0001289",
+			"addressType" : "BUSINESS",
+			"address1" : "9C1, St James Street",
+			"address2" : "Wallen hall",
+			"city" : "Austin",
+			"state" : "Texas",
+			"country" : "United States of America",
+			"zipCode" : "73301"
+		},
+		"technicianType" : "Manual",
+		"jobType" : "Permanent"
+	},
+	"store":{  
+      "book":[  
+         {  
+            "author":"Nigel Rees",
+            "category":"reference",
+            "price":8.95,
+            "title":"Sayings of the Century"
+         },
+         {  
+            "author":"Evelyn Waugh",
+            "category":"fiction",
+            "price":12.99,
+            "title":"Sword of Honour"
+         },
+         {  
+            "author":"Herman Melville",
+            "category":"fiction",
+            "isbn":"0-553-21311-3",
+            "price":8.99,
+            "title":"Moby Dick"
+         },
+         {  
+            "author":"J. R. R. Tolkien",
+            "category":"fiction",
+            "isbn":"0-395-19395-8",
+            "price":22.99,
+            "title":"The Lord of the Rings"
+         }
+      ]
+   }
+}
