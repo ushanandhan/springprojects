@@ -12,13 +12,13 @@ After the ZIP downloads, extract the ZIP file and fire up Eclipse import as a Ma
 ## 1.2.	Add additional maven Dependencies for Camunda:
 In your pom.xml add below dependencies.
 
-<repositories>
-	<repository>
-		<id>camunda-bpm-nexus</id>
-		<name>camunda-bpm-nexus</name>
-		<url>https://app.camunda.com/nexus/content/groups/public</url>
-	</repository>
-</repositories>
+	<repositories>
+		<repository>
+			<id>camunda-bpm-nexus</id>
+			<name>camunda-bpm-nexus</name>
+			<url>https://app.camunda.com/nexus/content/groups/public</url>
+		</repository>
+	</repositories>
 	<dependency>
 		<groupId>org.camunda.bpm.springboot</groupId>
 		<artifactId>camunda-bpm-spring-boot-starter</artifactId>
