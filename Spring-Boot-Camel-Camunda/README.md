@@ -5,4 +5,4 @@ Spring Boot has really made developers' lives easier. Spring Boot's starters and
 Spring Boot projects can be created in two ways. One is through Spring Boot Intitializr (https://start.spring.io/) (which we are doing here) and the other is through the STS Plugin for Eclipse. 
 
 When you enter the Spring Initializr website, you'll be greeted with the interface below.
-
+![image](https://user-images.githubusercontent.com/8769673/46129775-52164500-c255-11e8-966f-879f75ac4393.png)
