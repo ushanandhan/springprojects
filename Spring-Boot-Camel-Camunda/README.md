@@ -9,6 +9,8 @@ When you enter the Spring Initializr website, you'll be greeted with the interfa
 
 After the ZIP downloads, extract the ZIP file and fire up Eclipse import as a Maven project. When the import process completes, Spring starters will help Maven download all the required dependencies for Camel.
 
+---
+
 ## 1.2.	Add additional maven Dependencies for Camunda:
 In your pom.xml add below dependencies.
 
@@ -42,6 +44,9 @@ In your pom.xml add below dependencies.
 Now If we run this application as mvn springboot:run, we get following logs in console,
 ![image](https://user-images.githubusercontent.com/8769673/46133433-1a5fcb00-c25e-11e8-9d31-5de6d877d1d5.png)
 
+---
+
+
 ## 1.3 Integrating Apache Camel with Camunda using Spring Boot:
 	In your pom.xml add below dependencies.
 Now, let's get our hands dirty.
@@ -59,6 +64,8 @@ The specialty of Camel starter and Camunda starter is that it'll auto-wire the C
 You already have a main method, which was created by Intializr. In that add CamelServiceImpl bean and set camel context & process engine as its property. Autowire them as well.
 
 ![image](https://user-images.githubusercontent.com/8769673/46133943-5b0c1400-c25f-11e8-9694-23e6ad41bd1a.png)
+
+---
 
 ## 1.4 Create BPMN file:
 	Using Camunda Moduler we can create one bpmn flow as below,
