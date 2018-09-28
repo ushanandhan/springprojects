@@ -1,5 +1,9 @@
 package com.example;
 
+import org.junit.jupiter.api.Assertions;
+
+import com.example.demo.FizzBuzz;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
