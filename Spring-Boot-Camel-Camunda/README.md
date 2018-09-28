@@ -69,6 +69,22 @@ You already have a main method, which was created by Intializr. In that add Came
 
 ## 1.4 Create BPMN file:
 	Using Camunda Moduler we can create one bpmn flow as below,
-![image](https://user-images.githubusercontent.com/8769673/46134063-a1fa0980-c25f-11e8-9b92-b20dcb49e33a.png)
+![image](https://user-images.githubusercontent.com/8769673/46181874-e16b3900-c2e5-11e8-976e-455565c54dae.png)
+
+You can refer camunda website (https://camunda.com/products/) to create bpmn file.
+
+## 1.5 Run our application:
+Once every thing is set lets run our application with the command mvn springboot:run.
+![image](https://user-images.githubusercontent.com/8769673/46181602-7a995000-c2e4-11e8-90f4-76a8bef2e5ff.png)
+- We can see camel has started and one router is started.
+- After that Camunda engine also started.
+- Hit http://localhost:8080/camel in the browser, we able to see full output in the console as below,
+
+![image](https://user-images.githubusercontent.com/8769673/46181791-71f54980-c2e5-11e8-9440-c6cba3106a81.png)
+
+## 1.5 Project Structure:
+
+![image](https://user-images.githubusercontent.com/8769673/46181922-3018d300-c2e6-11e8-8291-7e4ac4ebbedb.png)
+
 
 
