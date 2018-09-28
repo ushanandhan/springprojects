@@ -8,6 +8,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 
+import com.example.demo.FizzBuzz;
+
 public class FizzBuzzTest {
 
 	private FizzBuzz fizzBuzz;
