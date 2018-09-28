@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/8769673/46193486-fbc00980-c31b-11e8-9ac7-64dbd3b64b32.png)
+
 # 1.	Integration of Spring Boot with Apache Camel & Camunda
 ## 1.1 Spring Initializr:
 Spring Boot has really made developers' lives easier. Spring Boot's starters and auto-configurators reduce a lot of burden on developers. Another nice integration framework is Apache Camel, which provided abstraction over different technologies. In this article, we'll learn how to integrate Spring Boot and Apache Camel.
