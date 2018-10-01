@@ -9,7 +9,7 @@
       <bpmn2:incoming>SequenceFlow_0oy9c54</bpmn2:incoming>
     </bpmn2:endEvent>
     <bpmn2:sequenceFlow id="SequenceFlow_0oy9c54" sourceRef="Task_0dfv74n" targetRef="EndEvent_1" />
-    <bpmn2:serviceTask id="Task_0dfv74n" name="Check the request" camunda:expression="${checkRequest.loanRequest()}">
+    <bpmn2:serviceTask id="Task_0dfv74n" name="Check the request" camunda:expression="${checkRequest.checkLoanRequest(execution)}">
       <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_0oy9c54</bpmn2:outgoing>
     </bpmn2:serviceTask>

@@ -5,7 +5,7 @@ import org.camunda.bpm.engine.runtime.Execution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.camel.model.Order;
+import com.example.model.Order;
 
 @Component("checkRequest")
 public class CheckRequest {

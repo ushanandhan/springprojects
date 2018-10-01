@@ -9,6 +9,7 @@ public class CamelRoutes extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		from("direct:firstRoute")
+			.process("camelProcessor")
 			.log("Camel body: ${body}")
 			.to("camunda-bpm:start?processDefinitionKey=loanApproval");
 	}
