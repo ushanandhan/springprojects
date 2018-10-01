@@ -12,6 +12,11 @@ public class CamelRoutes extends RouteBuilder {
 			.process("camelProcessor")
 			.log("Camel body: ${body}")
 			.to("camunda-bpm:start?processDefinitionKey=loanApproval");
+		
+		from("direct:applyForJobRoute")
+			.process("interviewProcessor")
+			.log("Camel body:${body}")
+			.to("camunda-bpm:start?processDefinitionKey=applyForJobProcess");
 	}
 
 }
