@@ -8,9 +8,9 @@ public class Candidate implements Serializable{
 	private String firstName;
 	private String lastName;
 	private String email;
-	private boolean isCalledForInterview;
-	private boolean isInterviewCleared;
-	private boolean isOfferAccepted;
+	private boolean calledForInterview;
+	private boolean interviewCleared;
+	private boolean offerAccepted;
 	public String getCandidateId() {
 		return candidateId;
 	}
@@ -36,29 +36,29 @@ public class Candidate implements Serializable{
 		this.email = email;
 	}
 	public boolean isCalledForInterview() {
-		return isCalledForInterview;
+		return calledForInterview;
 	}
-	public void setCalledForInterview(boolean isCalledForInterview) {
-		this.isCalledForInterview = isCalledForInterview;
+	public void setCalledForInterview(boolean calledForInterview) {
+		this.calledForInterview = calledForInterview;
 	}
 	public boolean isInterviewCleared() {
-		return isInterviewCleared;
+		return interviewCleared;
 	}
-	public void setInterviewCleared(boolean isInterviewCleared) {
-		this.isInterviewCleared = isInterviewCleared;
+	public void setInterviewCleared(boolean interviewCleared) {
+		this.interviewCleared = interviewCleared;
 	}
 	public boolean isOfferAccepted() {
-		return isOfferAccepted;
+		return offerAccepted;
 	}
-	public void setOfferAccepted(boolean isOfferAccepted) {
-		this.isOfferAccepted = isOfferAccepted;
+	public void setOfferAccepted(boolean offerAccepted) {
+		this.offerAccepted = offerAccepted;
 	}
 	
 	@Override
 	public String toString() {
 		return "Candidate [candidateId=" + candidateId + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", email=" + email + ", isCalledForInterview=" + isCalledForInterview + ", isInterviewCleared="
-				+ isInterviewCleared + ", isOfferAccepted=" + isOfferAccepted + "]";
+				+ ", email=" + email + ", isCalledForInterview=" + calledForInterview + ", isInterviewCleared="
+				+ interviewCleared + ", isOfferAccepted=" + offerAccepted + "]";
 	}
 	
 }
