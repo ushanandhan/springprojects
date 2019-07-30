@@ -61,7 +61,6 @@ We need to create Mapper XML files to define the queries for the mapped SQL stat
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sivalabs.demo.mappers.UserMapper">
-
 	<resultMap id="UserResultMap" type="User">
 		<id column="id" property="id" />
 		<result column="name" property="name" />
@@ -75,9 +74,10 @@ We need to create Mapper XML files to define the queries for the mapped SQL stat
 	<select id="findUserById" resultMap="UserResultMap">
 		select id, name, email from users WHERE id=#{id}
 	</select>
-<insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
-	insert into users(name,email) values(#{name},#{email})
-</insert>
+	
+	<insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+		insert into users(name,email) values(#{name},#{email})
+	</insert>
 </mapper>
 ```
 A few things to observe here are:
