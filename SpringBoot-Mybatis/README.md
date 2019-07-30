@@ -3,7 +3,7 @@
 # SPRING BOOT & MYBATIS INTEGRATION WITH HSQL DATABASE
 MyBatis is a SQL Mapping framework with support for custom SQL, stored procedures and advanced mappings.
 
-## 1. Create a SpringBoot Maven project and add following MyBatis Starter Dependency:
+### 1. Create a SpringBoot Maven project and add following MyBatis Starter Dependency:
 
 ```xml
 <dependency>
@@ -18,7 +18,7 @@ MyBatis is a SQL Mapping framework with support for custom SQL, stored procedure
 </dependency>
 ```
 
-# 2. Create Domain class:
+### 2. Create Domain class:
 ```java
 public class User	{
     private Integer id;
@@ -28,7 +28,7 @@ public class User	{
     // setters & getters
 }
 ```
-# 3. Create schema.sql: 
+### 3. Create schema.sql: 
 ```sql
 CREATE TABLE users
 (
@@ -38,14 +38,14 @@ CREATE TABLE users
     PRIMARY KEY (id)
 );
 ```
-# 4. Create data.sql:
+### 4. Create data.sql:
 ```sql
 insert into users(id, name, email) values(1,'Siva','siva@gmail.com');
 insert into users(id, name, email) values(2,'Prasad','prasad@gmail.com');
 insert into users(id, name, email) values(3,'Reddy','reddy@gmail.com');
 ```
 
-# 5. Create MyBatis SQL mapper interface (UserMapper.java):
+### 5. Create MyBatis SQL mapper interface (UserMapper.java):
 ```java
 public interface UserMapper	{
     void insertUser(User user);
@@ -56,7 +56,7 @@ public interface UserMapper	{
 
 We need to create Mapper XML files to define the queries for the mapped SQL statements for the corresponding Mapper interface methods.
 
-# 6. Create UserMapper.xml: (Using XML configuration)
+### 6. Create UserMapper.xml: (Using XML configuration)
 ```xml
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
@@ -88,7 +88,7 @@ A few things to observe here are:
 
 MyBatis also provides annotation based query configurations without requiring Mapper XMLs.
 
-# 7. Create UserMapper.java: (Using annotation configuration)
+### 7. Create UserMapper.java: (Using annotation configuration)
 ```java
 public interface UserMapper{
     @Insert("insert into users(name,email) values(#{name},#{email})")
@@ -104,7 +104,7 @@ public interface UserMapper{
 
 SpringBoot MyBatis starter provides the following MyBatis configuration parameters which we can use to customize MyBatis settings in application.properties file.
 
-# 8. Application.properties:
+### 8. Application.properties:
 ```properties
 mybatis.config = mybatis config file name
 mybatis.mapperLocations = classpath*:**/mappers/*.xml
@@ -114,7 +114,7 @@ mybatis.check-config-location = check the mybatis configuration exists
 mybatis.executorType = mode of execution. Default is SIMPLE
 ```
 
-# 9. Application.java:
+### 9. Application.java:
 ```java
 @SpringBootApplication
 @MapperScan("com.ushan.demo.mappers")
@@ -126,7 +126,7 @@ public class Application{
 }
 ```
 
-# 10. JUnit Test Class:
+### 10. JUnit Test Class:
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(Application.class)
