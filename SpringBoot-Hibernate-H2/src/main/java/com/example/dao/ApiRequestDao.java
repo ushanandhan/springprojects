@@ -34,3 +34,4 @@ public class ApiRequestDao {
 			entityManager.remove(apiRequest);
 		}
 	}
+}
