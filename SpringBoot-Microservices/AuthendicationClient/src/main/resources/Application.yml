@@ -1,0 +1,21 @@
+spring: # Service registers under this name
+  application:
+    name: authentication-service
+  datasource: # MySql credentials
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: ushan
+  jpa: # JPA support
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      use-new-id-generator-mappings: false
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+eureka: # Discovery Server Access
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+server: # HTTP Server (Tomcat) Port
+  port: 9001
