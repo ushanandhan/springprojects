@@ -45,6 +45,7 @@ public class ApiRequestController {
     
     @GetMapping(value="/getAllApiRequests",produces = MediaType.APPLICATION_JSON_VALUE)
     public List<ApiRequest> getAllApiRequests(){
-    	return apiRequestService.getAllApiRequests();
+    	List<ApiRequest> results =  apiRequestService.getAllApiRequests();
+    	return results;
     }
 }
