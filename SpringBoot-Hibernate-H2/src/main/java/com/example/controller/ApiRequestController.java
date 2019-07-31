@@ -3,6 +3,7 @@ package com.example.controller;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +19,6 @@ import com.example.entity.ApiRequest;
 import com.example.service.ApiRequestService;
 
 @RestController
-@EnableAutoConfiguration
 public class ApiRequestController {
 
     @Autowired
@@ -40,5 +41,10 @@ public class ApiRequestController {
         }
 
         return response;
+    }
+    
+    @GetMapping(value="/getAllApiRequests",produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<ApiRequest> getAllApiRequests(){
+    	return apiRequestService.getAllApiRequests();
     }
 }
