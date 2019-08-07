@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/8769673/62639904-1280b500-b95e-11e9-8131-fd80fee21cb2.png)
+
 # Angular 6 Client Application
 ## 1. Create Angular 6 client application using Angular CLI
 ```script
