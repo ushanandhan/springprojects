@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './service/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular 6 + Spring Boot 2 + Spring Data JPA + H2 + CRUD Tutorial';
+
+  constructor(private loginService:AuthenticationService) { }
 }
