@@ -1,4 +1,4 @@
-package com.rntbci.grm.model;
+package com.ushan.dev.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

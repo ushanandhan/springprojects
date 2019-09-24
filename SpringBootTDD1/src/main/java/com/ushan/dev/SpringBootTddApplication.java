@@ -1,4 +1,4 @@
-package com.rntbci.grm;
+package com.ushan.dev;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

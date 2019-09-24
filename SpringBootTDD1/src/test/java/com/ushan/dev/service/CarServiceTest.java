@@ -1,4 +1,4 @@
-package com.rntbci.grm.service;
+package com.ushan.dev.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -16,9 +16,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.rntbci.grm.exception.CarNotFoundException;
-import com.rntbci.grm.model.Car;
-import com.rntbci.grm.repository.CarRepository;
+import com.ushan.dev.exception.CarNotFoundException;
+import com.ushan.dev.model.Car;
+import com.ushan.dev.repository.CarRepository;
+import com.ushan.dev.service.CarService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

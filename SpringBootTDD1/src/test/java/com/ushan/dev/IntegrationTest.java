@@ -1,6 +1,7 @@
-package com.rntbci.grm;
+package com.ushan.dev;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 
@@ -19,14 +20,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.rntbci.grm.model.Car;
-import com.rntbci.grm.service.CarService;
+import com.ushan.dev.model.Car;
+import com.ushan.dev.service.CarService;
 
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
-public class SpringBootTddApplicationTests {
+public class IntegrationTest {
 
 	@LocalServerPort
 	private int port;
@@ -59,12 +60,6 @@ public class SpringBootTddApplicationTests {
 	
 	@Test
 	public void getAllCars() throws Exception{
-		/*ResponseEntity<Car[]> response = restTemplate.getForEntity(
-		          "http://localhost:"+port+"/cars/", Car[].class);
-		Car[] carList = response.getBody();
-		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-		assertThat(carList.length).isEqualTo(3);*/
-		
 		ResponseEntity<List<Car>> response = restTemplate.exchange(
 				"http://localhost:"+port+"/cars/",
 				HttpMethod.GET,
@@ -72,7 +67,29 @@ public class SpringBootTddApplicationTests {
 				new ParameterizedTypeReference<List<Car>>() {});
 		List<Car> carList = response.getBody();
 		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-		assertThat(carList.size()).isEqualTo(3);
+		assertThat(carList.size()).isEqualTo(4);
+	}
+	
+	@Test
+	public void saveCar() throws Exception{
+		Car car = new Car("Scala","Sadan");
+		ResponseEntity<Car> response = restTemplate.postForEntity("http://localhost:"+port+"/cars/", 
+				car, Car.class);
+		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+		assertNotNull(response.getBody().getId());
+	}
+	
+	@Test
+	public void updateCar() throws Exception{
+		Car saveCar = new Car("Captur","SUV");
+		ResponseEntity<Car> saveResponse = restTemplate.postForEntity("http://localhost:"+port+"/cars/", 
+				saveCar, Car.class);
+		Car updateCar = saveResponse.getBody();
+		updateCar.setType("crossOver");
+		HttpEntity<Car> entity = new HttpEntity<>(updateCar, headers);
+		ResponseEntity<Car> response = restTemplate.exchange("http://localhost:"+port+"/cars/", HttpMethod.PUT, entity, Car.class);
+		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+		assertThat(response.getBody().getType()).isEqualTo("crossOver");
 	}
 
 }

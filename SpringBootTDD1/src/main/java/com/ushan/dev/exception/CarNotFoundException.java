@@ -1,4 +1,4 @@
-package com.rntbci.grm.exception;
+package com.ushan.dev.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

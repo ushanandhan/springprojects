@@ -1,4 +1,4 @@
-package com.rntbci.grm.repository;
+package com.ushan.dev.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -11,7 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.rntbci.grm.model.Car;
+import com.ushan.dev.model.Car;
+import com.ushan.dev.repository.CarRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

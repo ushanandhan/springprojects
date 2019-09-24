@@ -1,4 +1,4 @@
-package com.rntbci.grm.service;
+package com.ushan.dev.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rntbci.grm.exception.CarNotFoundException;
-import com.rntbci.grm.model.Car;
-import com.rntbci.grm.repository.CarRepository;
+import com.ushan.dev.exception.CarNotFoundException;
+import com.ushan.dev.model.Car;
+import com.ushan.dev.repository.CarRepository;
 
 @Service("carService")
 public class CarService {

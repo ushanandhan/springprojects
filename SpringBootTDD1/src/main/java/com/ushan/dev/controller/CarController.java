@@ -1,4 +1,4 @@
-package com.rntbci.grm.controller;
+package com.ushan.dev.controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rntbci.grm.model.Car;
-import com.rntbci.grm.service.CarService;
+import com.ushan.dev.model.Car;
+import com.ushan.dev.service.CarService;
 
 @RestController
 @RequestMapping("/cars")

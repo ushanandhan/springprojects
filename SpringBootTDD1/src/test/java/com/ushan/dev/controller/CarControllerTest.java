@@ -1,4 +1,4 @@
-package com.rntbci.grm.controller;
+package com.ushan.dev.controller;
 
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -20,9 +20,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rntbci.grm.exception.CarNotFoundException;
-import com.rntbci.grm.model.Car;
-import com.rntbci.grm.service.CarService;
+import com.ushan.dev.exception.CarNotFoundException;
+import com.ushan.dev.model.Car;
+import com.ushan.dev.service.CarService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest
