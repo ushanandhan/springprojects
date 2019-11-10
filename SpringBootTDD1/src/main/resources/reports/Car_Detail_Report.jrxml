@@ -28,6 +28,10 @@
 				</textElement>
 				<text><![CDATA[CAR DETAILS]]></text>
 			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="226" height="79" uuid="9837f51c-cf19-4bf1-9e98-d77f024bdb7d"/>
+				<imageExpression><![CDATA["A_J_Imports_Logo.png"]]></imageExpression>
+			</image>
 		</band>
 	</pageHeader>
 	<columnHeader>
