@@ -15,7 +15,7 @@ After the ZIP downloads, extract the ZIP file and fire up Eclipse import as a Ma
 
 ## 1.2.	Add additional maven Dependencies for Camunda:
 In your pom.xml add below dependencies.
-
+```xml
 	<repositories>
 		<repository>
 			<id>camunda-bpm-nexus</id>
@@ -43,6 +43,7 @@ In your pom.xml add below dependencies.
 		<groupId>com.h2database</groupId>
 		<artifactId>h2</artifactId>
 	</dependency>
+```
 Now If we run this application as mvn springboot:run, we get following logs in console,
 ![image](https://user-images.githubusercontent.com/8769673/46133433-1a5fcb00-c25e-11e8-9d31-5de6d877d1d5.png)
 
