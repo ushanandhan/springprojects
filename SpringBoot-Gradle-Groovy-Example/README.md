@@ -178,8 +178,8 @@ Run mvn spring-boot run command and run spring boot application. Now, open http:
 ![image](https://user-images.githubusercontent.com/8769673/74841056-05517380-534e-11ea-8516-41fe18825261.png)
 
 ## 3. Important properties related to Liquibase and Spring application
-We can write following properties in application.properties file for more specific configurations –
-References
+We can write following properties in application.properties file for more specific configurations –  
+[References](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#data-migration-properties)
 ```properties
 spring.liquibase.change-log=classpath:/db/changelog/db.changelog-master.yaml # Change log configuration path.
 spring.liquibase.check-change-log-location=true # Whether to check that the change log location exists.
