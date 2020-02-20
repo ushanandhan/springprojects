@@ -127,7 +127,7 @@ Now create first change log file create-person-table-changelog-1.xml at shown in
 ```
 
 ### 2.4.3 insert-person-table-changelog-2.xml
-Now create second change log file insert-person-table-changelog-2.xml at shown in the path above file. This file’s changeSet will perform insert values operation for person table. You can find more database operation syntax for liquibase at this link.
+Now create second change log file insert-person-table-changelog-2.xml at shown in the path above file. This file’s changeSet will perform insert values operation for person table. You can find more database operation syntax for liquibase at this [link](https://www.liquibase.org/documentation/changes/).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -149,7 +149,7 @@ Now create second change log file insert-person-table-changelog-2.xml at shown i
 ```
 
 ### 2.4.4 update-person-table-precondition-3.xml
-Now create third change log file update-person-table-precondition-3.xml at shown in the path above file. In this file, we have used <preconditions> tag for defining preconditional statement. The changes will be executed in DB only when precondition will be satisfied. Here, we have given the condition for DBMS type must be h2. We can perform different conditions based on different factors like tableExist, sqlCheck, columnExist, etc (preconditions). Below changeSet will update the value in person table.
+Now create third change log file update-person-table-precondition-3.xml at shown in the path above file. In this file, we have used <preconditions> tag for defining preconditional statement. The changes will be executed in DB only when precondition will be satisfied. Here, we have given the condition for DBMS type must be h2. We can perform different conditions based on different factors like tableExist, sqlCheck, columnExist, etc ([preconditions](http://www.liquibase.org/documentation/preconditions.html)). Below changeSet will update the value in person table.
   
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -172,7 +172,7 @@ Now create third change log file update-person-table-precondition-3.xml at shown
 </databaseChangeLog>
 ```
 ## 2.5 Output
-Run mvn spring-boot run command and run spring boot application. Now, open http://localhost:8080/h2-console/  url in the browser. Login with database properties configured in application.properties file. Write SELECT * FROM PERSON  in textarea and click on Run. Your three database changes(create table, insert into table and update table with precondition) has been reflected in the output. You can also perform one by one changeSet and check the output.
+Run mvn spring-boot run command and run spring boot application. Now, open [http://localhost:8080/h2-console/](http://localhost:8080/h2-console/)  url in the browser. Login with database properties configured in application.properties file. Write SELECT * FROM PERSON  in textarea and click on Run. Your three database changes(create table, insert into table and update table with precondition) has been reflected in the output. You can also perform one by one changeSet and check the output.
 
 
 ![image](https://user-images.githubusercontent.com/8769673/74841056-05517380-534e-11ea-8516-41fe18825261.png)
