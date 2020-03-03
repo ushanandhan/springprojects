@@ -34,7 +34,7 @@ class EmployeeControllerSpecsTest extends Specification{
         employees.employeeList.add(employee)
 
         when:
-        def response = restTemplate.postForEntity('/employees/',employees,Object)
+        def response = restTemplate.postForEntity('/employees/',employee,Object)
 
         then:
         response.statusCode == HttpStatus.CREATED
