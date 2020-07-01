@@ -2,6 +2,8 @@ package com.ushan.dev.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +57,11 @@ public class CarServiceTest {
 		
 		List<Car> returnCarList = carService.getAllCars();
 		assertThat(carList).isEqualTo(returnCarList);
+		
+		carService.getAllCars();
+		
+		//Verifying that getAllCars only called once due to cache
+		verify(carRepository, times(1)).findAll();
 	}
 	
 	@Test
