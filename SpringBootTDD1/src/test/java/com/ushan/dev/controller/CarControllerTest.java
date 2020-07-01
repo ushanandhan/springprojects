@@ -25,7 +25,7 @@ import com.ushan.dev.model.Car;
 import com.ushan.dev.service.CarService;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest
+@WebMvcTest(controllers=CarController.class)
 public class CarControllerTest {
 
 	@Autowired

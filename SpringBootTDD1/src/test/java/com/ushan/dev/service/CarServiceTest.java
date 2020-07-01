@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.assertj.core.util.Arrays;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -19,7 +18,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.ushan.dev.exception.CarNotFoundException;
 import com.ushan.dev.model.Car;
 import com.ushan.dev.repository.CarRepository;
-import com.ushan.dev.service.CarService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
